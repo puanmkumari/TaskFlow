@@ -1,0 +1,172 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    }
+    
+    body{
+    background:#e1bebe;
+    color:#412d2d;
+    }
+    
+    .navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:#4e4444;
+    color:rgb(234, 226, 226);
+    }
+    
+    .logo{
+    font-size:24px;
+    font-weight:bold;
+    }
+    
+    .nav-links{
+    display:flex;
+    list-style:none;
+    }
+    
+    .nav-links li{
+    margin-left:20px;
+    }
+    
+    .nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+    }
+    
+    .nav-links a:hover,
+    .active{
+    color:#00bcd4;
+    }
+    
+    .hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    padding:60px;
+    gap:40px;
+    }
+    
+    .hero img{
+    width:100%;
+    max-width:350px;
+    border-radius:50%;
+    }
+    
+    .btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#00bcd4;
+    color:white;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    transition:.3s;
+    }
+    
+    .btn:hover{
+    background:#0097a7;
+    transform:scale(1.05);
+    }
+    
+    .about,
+    .contact{
+    padding:50px;
+    }
+    
+    .skills{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:30px;
+    }
+    
+    .card{
+    background:white;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+    transition:.3s;
+    }
+    
+    .card:hover{
+    transform:translateY(-8px);
+    }
+    
+    form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:500px;
+    }
+    
+    input,
+    textarea{
+    padding:12px;
+    font-size:16px;
+    }
+    
+    footer{
+    text-align:center;
+    padding:20px;
+    background:#222;
+    color:white;
+    margin-top:40px;
+    }
+    
+    /* Hamburger */
+    
+    #menu-toggle{
+    display:none;
+    }
+    
+    .hamburger{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    }
+    
+    /* Mobile */
+    
+    @media(max-width:768px){
+    
+    .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:30px;
+    }
+    
+    .skills{
+    grid-template-columns:1fr;
+    }
+    
+    .hamburger{
+    display:block;
+    }
+    
+    .nav-links{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#222;
+    flex-direction:column;
+    }
+    
+    .nav-links li{
+    margin:15px 0;
+    text-align:center;
+    }
+    
+    #menu-toggle:checked ~ .nav-links{
+    display:flex;
+    }
+    
+    }
